@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <script type="module" src="./js/app.js" defer></script>
+    <link rel="stylesheet" href="./dist/style.css" />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        margin-bottom: 5rem;
+        position: relative;
+
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: var(--todo-text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header"></header>
+
+      <main>
+        <header class="main">
+          <h1 class="main__title">todo</h1>
+          <button class="main__toggle--btn" toggle-btn>
+            <span class="visually-hidden">dark / light</span>
+          </button>
+        </header>
+
+        <form action="" class="form" data-form>
+          <label for="text" class="input-label">
+            <input class="todo-input" type="text" name="text" id="todo-input" placeholder="Create a new todo..." data-input />
+            <svg class="svg-invalid-input" xmlns="http://www.w3.org/2000/svg" width="5%" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path fill="#ff0000" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+            </svg>
+            <span class="invalid-text">Enter Letters and Numbers only</span>
+          </label>
+        </form>
+
+        <div class="todo__wrapper">
+          <ul class="todo__list" data-todo-list>
+            <!--  -->
+          </ul>
+
+          <div class="todo__tabs">
+            <p class="items-left"><span data-count>5</span> items left</p>
+
+            <div class="todo__tabs--button desktop">
+              <button class="button--item" data-active-tab data-tab="all" aria-label="display all todo list">All</button>
+              <button class="button--item" data-tab="active" aria-label="display all active todo list">Active</button>
+              <button class="button--item" data-tab="completed" aria-label="display all completed todo list">Completed</button>
+            </div>
+
+            <button class="button--item" data-clear="clear">Clear Complete</button>
+          </div>
+        </div>
+        <!-- mobile tabs -->
+        <div class="todo__tabs--button mobile">
+          <button class="button--item" data-active-tab data-tab="all" aria-label="display all todo list">All</button>
+          <button class="button--item" data-tab="active" aria-label="display all active todo list">Active</button>
+          <button class="button--item" data-tab="completed" aria-label="display all completed todo list">Completed</button>
+        </div>
+      </main>
+
+      <footer aria-details="includes challenge by and the challenger">
+        <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a target="_blank" href="https://github.com/Florvin-04/todo-app-main.git">FLORVIN</a>.</div>
+      </footer>
+    </div>
+  </body>
+</html>
